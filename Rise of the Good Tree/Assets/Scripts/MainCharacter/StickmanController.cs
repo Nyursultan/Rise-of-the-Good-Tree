@@ -8,17 +8,39 @@ public class StickmanController : MonoBehaviour
 
     public bool Right;
     public bool Left;
+    public float jumpForce;
+    [SerializeField] private LayerMask platformsLayerMask;
 
     public Rigidbody2D rbRightForWalk;
     public Rigidbody2D rbRightMidForWalk;
     public Rigidbody2D rbLeftForWalk;
     public Rigidbody2D rbLeftMidForWalk;
 
+    public GameObject[] mainCharacter;
+    public BoxCollider2D groundCheck;
+
     public Vector2 WalkRightVector;
     public Vector2 WalkLeftVector;
 
     private float MoveDelayPointer;
     public float MoveDelay;
+
+    private bool isGrounded()
+    {
+        RaycastHit2D raycastHit2d = Physics2D.BoxCast(groundCheck.bounds.center, groundCheck.bounds.size, 0f, Vector2.down, .1f, platformsLayerMask);
+        return raycastHit2d.collider != null;
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.Space) && isGrounded())
+        {
+            rbLeftForWalk.AddForce(new Vector2(rbLeftForWalk.velocity.x, jumpForce));
+            rbLeftMidForWalk.AddForce(new Vector2(rbLeftMidForWalk.velocity.x, jumpForce));
+            rbRightForWalk.AddForce(new Vector2(rbRightForWalk.velocity.x, jumpForce));
+            rbRightMidForWalk.AddForce(new Vector2(rbRightMidForWalk.velocity.x, jumpForce));
+        }
+    }
 
     private void Update()
     {
@@ -92,7 +114,6 @@ public class StickmanController : MonoBehaviour
 }
 
 [System.Serializable]
-
 public class _Muscle
 {
     public Rigidbody2D bone;
