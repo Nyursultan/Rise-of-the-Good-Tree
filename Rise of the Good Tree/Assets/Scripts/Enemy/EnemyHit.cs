@@ -5,11 +5,8 @@ using UnityEngine;
 public class EnemyHit : MonoBehaviour
 {
     private GameObject body;
-    public float damage = 105f;
+    public float damage = 10f;
     Damageble damageble;
-
-    [SerializeField]
-    float delay;
 
     void Start()
     {
@@ -17,17 +14,13 @@ public class EnemyHit : MonoBehaviour
         damageble = body.GetComponent<Damageble>();
     }
 
-    private void Death()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Body")
+        if (collision.tag == "Body")
         {
             if (damageble != null)
             {
+                FindObjectOfType<AudioManager>().Play("TreeHit");
                 damageble.Damage(damage);
             }
         }
