@@ -27,7 +27,7 @@ public class FlyingCarrotMovement : MonoBehaviour
 
         state = CarrotStates.WaitState;
 
-        shoot = GetComponent<ShootFlyingCarrot>();
+        shoot = GetComponentInChildren<ShootFlyingCarrot>();
     }
 
     void Update()

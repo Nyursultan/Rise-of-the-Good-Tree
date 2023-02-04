@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootFlyingCarrot : MonoBehaviour
+public class ShootEvilWorm : MonoBehaviour
 {
     [SerializeField]
     GameObject bullet, startPoint;
@@ -10,29 +10,38 @@ public class ShootFlyingCarrot : MonoBehaviour
     Transform playerPoint;
 
     [SerializeField]
-    float delay;
+    float delay, maxCountFire;
 
     float time = 0;
 
-    Animator animator;
-    private void Start()
+    float currentCount = 0;
+    void Start()
     {
         playerPoint = GameObject.FindGameObjectWithTag("Body").transform;
-        animator = GetComponent<Animator>();
     }
 
-    public void Shoot()
+
+
+    public bool Shoot()
     {
         time += Time.deltaTime;
 
-        if (time >= delay)
+        if (time >= delay && currentCount <= maxCountFire)
         {
-            animator.SetTrigger("isFire");
+            Fire();
+            currentCount++;
             time = 0;
         }
+
+        if (currentCount >= maxCountFire)
+        {
+            return false;//закончил стрелять
+        }
+
+        return true;
     }
 
-    public void Fire()
+    void Fire()
     {
         GameObject currentBullet = Instantiate(bullet, startPoint.transform.position, Quaternion.identity);
 
@@ -41,5 +50,11 @@ public class ShootFlyingCarrot : MonoBehaviour
         Vector3 direction = playerPoint.position - transform.position;
 
         bulletComponent.Fire(direction);
+    }
+
+    public void EndFire()
+    {
+        currentCount = 0;
+        time = 0;
     }
 }

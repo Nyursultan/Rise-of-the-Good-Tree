@@ -37,6 +37,8 @@ public class FlyingRedisMovement : MonoBehaviour
                 time += Time.deltaTime;
                 if (distanceBetween <= startDistance && time >= waitTime)
                     state = RedisStates.ChaseState;
+                else
+                    time = time >= waitTime ? 0 : time;
                 break;
             case RedisStates.ChaseState:
                 Move();
