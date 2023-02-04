@@ -14,6 +14,7 @@ public class EnemyDeath : MonoBehaviour
 
     private void Damageble_OnCharacterDeadEvent(object obj)
     {
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
         StartCoroutine(DeadAnim());
     }
 

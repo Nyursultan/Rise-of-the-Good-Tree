@@ -36,6 +36,8 @@ public class Bullet : MonoBehaviour
 
     public void Fire(Vector3 direction)//после срабатывания этой функции пуля начинает летать
     {
+        FindObjectOfType<AudioManager>().Play("BulletShot");
+
         this.direction = direction.normalized;
         isMove = true;
 

@@ -29,6 +29,7 @@ public class Damageble : MonoBehaviour
 
         OnCharacterTakeDamageEvent?.Invoke(this);
 
+
         if (hp <= 0)
         {
             OnCharacterDeadEvent?.Invoke(this);

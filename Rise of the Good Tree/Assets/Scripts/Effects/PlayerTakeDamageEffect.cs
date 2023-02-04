@@ -11,6 +11,7 @@ public class PlayerTakeDamageEffect : MonoBehaviour
     Color damageColor;
 
     Damageble damageble;
+    SliderController healthBar;
 
     SpriteRenderer[] sprites;
     List<Color> colors = new List<Color>();
@@ -20,8 +21,9 @@ public class PlayerTakeDamageEffect : MonoBehaviour
     {
         damageble = GetComponent<Damageble>();
         damageble.OnCharacterTakeDamageEvent += Damageble_OnCharacterTakeDamageEvent;
-
         sprites = transform.parent.GetComponentsInChildren<SpriteRenderer>();
+
+        healthBar = GameObject.Find("HealthBar").GetComponent<SliderController>();
 
         for (int i = 0; i < sprites.Length; i++)
         {
@@ -31,6 +33,8 @@ public class PlayerTakeDamageEffect : MonoBehaviour
 
     private void Damageble_OnCharacterTakeDamageEvent(object obj)
     {
+        healthBar.SetHealth(damageble.HitPoint);
+        FindObjectOfType<AudioManager>().Play("PlayerHit");
         StartCoroutine(TakeDamageAnim());
     }
 
@@ -53,7 +57,7 @@ public class PlayerTakeDamageEffect : MonoBehaviour
         for (int i = 0; i < sprites.Length; i++)
         {
             sprites[i].color = colors[i];
-            print(colors[i].r);
+            //print(colors[i].r);
         }
     }
 }
