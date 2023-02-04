@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - MAIN_CHAR_BULLET
+  - Body
   layers:
   - Default
   - TransparentFX
@@ -12,9 +13,9 @@ TagManager:
   - Platform
   - Water
   - UI
-  - 
-  - 
-  - 
+  - FlyingCarrot
+  - EnemyBullet
+  - Enemy
   - 
   - 
   - 

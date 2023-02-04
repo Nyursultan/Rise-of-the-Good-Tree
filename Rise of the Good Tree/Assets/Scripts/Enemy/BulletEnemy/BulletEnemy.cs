@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletEnemy : MonoBehaviour
 {
     [SerializeField]
     private float speed, maxLifeTime, damage = 1;
@@ -57,7 +57,7 @@ public class Bullet : MonoBehaviour
 
         if (damageble != null)
             damageble.Damage(damage);//если попал в объект который получает урон он наносит урон
-        
+
 
         Death();
     }
@@ -79,7 +79,7 @@ public class Bullet : MonoBehaviour
         float directionAngle = Vector2.Angle(Vector2.right, direction);
         sprite = GetComponentInChildren<SpriteRenderer>();
 
-        if (direction.y<0)
+        if (direction.y < 0)
         {
             directionAngle *= -1;
         }
