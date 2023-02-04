@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class StickmanCollision : MonoBehaviour
 {
-    private bool oneSecLasted = false;
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Platform" && !oneSecLasted && Input.GetAxisRaw("Horizontal") != 0)
+        if (collision.collider.tag == "Platform" && Input.GetAxisRaw("Horizontal") != 0)
         {
             FindObjectOfType<AudioManager>().Play("Step");
-            oneSecLasted = true;
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void JumpSound()
     {
-        if (collision.collider.tag == "Platform" && oneSecLasted)
+        FindObjectOfType<AudioManager>().Play("Step");
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.Space))
         {
-            oneSecLasted = false;
+            JumpSound();
         }
     }
 }
