@@ -14,11 +14,23 @@ public class EnemyDeath : MonoBehaviour
 
     private void Damageble_OnCharacterDeadEvent(object obj)
     {
-        Destroy(gameObject);
+        StartCoroutine(DeadAnim());
     }
 
-    void Update()
+    IEnumerator DeadAnim()
     {
+        float distance = Vector3.Distance(transform.localScale, Vector3.zero);
+        float step = 0;
+        while (distance >= 0.01) 
+        {
+            distance = Vector3.Distance(transform.localScale, Vector3.zero);
+            step += 0.5f * Time.deltaTime;
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, step);
 
+            transform.eulerAngles += new Vector3(0, 0, 5f);
+            yield return null;
+        }
+
+        Destroy(gameObject);
     }
 }

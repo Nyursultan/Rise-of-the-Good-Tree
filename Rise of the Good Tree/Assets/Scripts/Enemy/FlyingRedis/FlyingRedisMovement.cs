@@ -19,10 +19,12 @@ public class FlyingRedisMovement : MonoBehaviour
     float speed, startDistance, waitTime, damage;//waitTime время остановки после касания ГГ
 
     float time;
+
+    SpriteRenderer sprite;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Body");
-
+        sprite = GetComponentInChildren<SpriteRenderer>();
         state = RedisStates.WaitState;
     }
 
@@ -30,7 +32,9 @@ public class FlyingRedisMovement : MonoBehaviour
     void Update()
     {
         float distanceBetween = Vector3.Distance(transform.position, player.transform.position);
-
+        
+        FlipSprite();
+        
         switch (state)
         {
             case RedisStates.WaitState:
@@ -55,6 +59,18 @@ public class FlyingRedisMovement : MonoBehaviour
         float distanceBetween = Vector3.Distance(transform.position, player.transform.position);
 
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+
+    }
+
+    public void FlipSprite()
+    {
+        Vector3 direction = player.transform.position - transform.position;
+
+        print(direction.x);
+        if (direction.x < 0)
+            sprite.flipX = false;
+        else
+            sprite.flipX = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

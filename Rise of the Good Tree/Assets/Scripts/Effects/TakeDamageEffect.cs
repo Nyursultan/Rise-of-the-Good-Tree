@@ -5,7 +5,7 @@ using UnityEngine;
 public class TakeDamageEffect : MonoBehaviour
 {
     [SerializeField]
-    int maxCountFrame;
+    int maxCountFrame=20;
 
     [SerializeField]
     Color color;
