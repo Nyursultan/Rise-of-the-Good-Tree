@@ -8,6 +8,7 @@ TagManager:
   - Body
   - Platform
   - NextLevel
+  - Boss
   layers:
   - Default
   - TransparentFX

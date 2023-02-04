@@ -53,7 +53,6 @@ public class PlayerTakeDamageEffect : MonoBehaviour
         for (int i = 0; i < sprites.Length; i++)
         {
             sprites[i].color = colors[i];
-            print(colors[i].r);
         }
     }
 }
