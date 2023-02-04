@@ -12,9 +12,12 @@ public class Bullet : MonoBehaviour
     Vector3 direction;
 
     bool isMove = false;
+
+    SpriteRenderer sprite;
     void Start()
     {
         //Fire(Vector3.right);
+        //sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -35,6 +38,9 @@ public class Bullet : MonoBehaviour
     {
         this.direction = direction.normalized;
         isMove = true;
+
+        float directionAngle = GetSpriteAngleDirection(direction);
+        sprite.gameObject.transform.eulerAngles = new Vector3(0, 0, directionAngle);
     }
 
     public void Death()//срабатывает когда заканчивается лайфтайм
@@ -54,5 +60,18 @@ public class Bullet : MonoBehaviour
         
 
         Death();
+    }
+
+    float GetSpriteAngleDirection(Vector3 direction)
+    {
+        float directionAngle = Vector2.Angle(Vector2.right, direction);
+        sprite = GetComponentInChildren<SpriteRenderer>();
+
+        if (direction.y<0)
+        {
+            directionAngle *= -1;
+        }
+
+        return directionAngle;
     }
 }
