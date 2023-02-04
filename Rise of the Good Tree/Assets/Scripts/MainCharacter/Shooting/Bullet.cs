@@ -75,6 +75,27 @@ public class Bullet : MonoBehaviour
             damageble.Damage(damage);
 
         Death();
+
+        if (collision.tag == "FlyingEye")
+        {
+            FindObjectOfType<AudioManager>().Play("FlyingEyeHit");
+        }
+        if (collision.tag == "EnemyTree")
+        {
+            FindObjectOfType<AudioManager>().Play("EnemyTreeHit");
+        }
+        if (collision.tag == "FlyingCarrot")
+        {
+            FindObjectOfType<AudioManager>().Play("FlyingCarrotHit");
+        }
+        if (collision.tag == "FlyingRedis")
+        {
+            FindObjectOfType<AudioManager>().Play("FlyingRedisHit");
+        }
+        if (collision.tag == "EvilWorm")
+        {
+            FindObjectOfType<AudioManager>().Play("EvilWormHit");
+        }
     }
     float GetSpriteAngleDirection(Vector3 direction)
     {

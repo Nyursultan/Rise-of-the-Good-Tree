@@ -16,6 +16,7 @@ public class TakeDamageEffect : MonoBehaviour
     SpriteRenderer sprite;
 
     int count;
+
     void Start()
     {
         damageble = GetComponent<Damageble>();
@@ -26,7 +27,6 @@ public class TakeDamageEffect : MonoBehaviour
 
     private void Damageble_OnCharacterTakeDamageEvent(object obj)
     {
-        FindObjectOfType<AudioManager>().Play("FlyingEyeHit");
         StartCoroutine(TakeDamageAnim());
     }
 

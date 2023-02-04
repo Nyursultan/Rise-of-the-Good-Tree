@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 1078091661}
   m_Layer: 8
   m_Name: FlyingRedis
-  m_TagString: Untagged
+  m_TagString: FlyingRedis
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
