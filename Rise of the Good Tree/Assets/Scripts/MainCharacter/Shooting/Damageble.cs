@@ -7,10 +7,11 @@ public class Damageble : MonoBehaviour
 {
     [SerializeField]
     float hp = 100;
+    
     public float HitPoint { get => hp; }
 
-
     public event Action<object> OnCharacterDeadEvent;
+    public event Action<object> OnCharacterTakeDamageEvent;
     void Start()
     {
         
@@ -25,6 +26,8 @@ public class Damageble : MonoBehaviour
     public void Damage(float damage)
     {
         hp -= damage;
+
+        OnCharacterTakeDamageEvent?.Invoke(this);
 
         if (hp <= 0)
         {

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742542518253425232}
   - component: {fileID: 4410622388473160559}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6080915384526644725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.17950077, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.0448752, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6327996715070612793}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6327996715070612775}
   - component: {fileID: 6327996715070612792}
   - component: {fileID: 6327996715070612795}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: MAIN_CHAR_BULLET
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
