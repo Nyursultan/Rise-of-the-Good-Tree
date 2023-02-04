@@ -66,7 +66,6 @@ public class FlyingRedisMovement : MonoBehaviour
     {
         Vector3 direction = player.transform.position - transform.position;
 
-        print(direction.x);
         if (direction.x < 0)
             sprite.flipX = false;
         else

@@ -6,7 +6,10 @@ public class Shoot : MonoBehaviour
 {
     [SerializeField]
     GameObject bullet, startPoint, body;
-    
+
+    [SerializeField]
+    Animator cameraShake;
+
     [SerializeField]
     float delay;
 
@@ -36,5 +39,7 @@ public class Shoot : MonoBehaviour
         Bullet bulletComponent = currentBullet.GetComponent<Bullet>();
 
         bulletComponent.Fire(body.transform.right);
+
+        cameraShake.SetTrigger("Fire");
     }
 }
