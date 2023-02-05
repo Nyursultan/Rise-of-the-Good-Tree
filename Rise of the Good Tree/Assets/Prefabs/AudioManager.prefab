@@ -52,7 +52,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Step
-    clip: {fileID: 8300000, guid: 98d4be7f3cbba304daf0605268d5c155, type: 3}
+    clip: {fileID: 8300000, guid: 3975502aa55c8154d8ea84ec2d707ea8, type: 3}
     volume: 1
     pitch: 1
     loop: 0
