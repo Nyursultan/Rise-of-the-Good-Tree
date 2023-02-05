@@ -93,3 +93,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: FootstepWood
+    clip: {fileID: 8300000, guid: 561b6c2c4fb9a49448192508c8586a99, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FootstepStone
+    clip: {fileID: 8300000, guid: bbcaeff9882c3b84ba9aa0c2994fb063, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
