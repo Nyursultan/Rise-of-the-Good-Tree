@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDeath : MonoBehaviour
 {
     Damageble damageble;
+    bool played = false;
     void Start()
     {
         Damageble damageble = GetComponent<Damageble>();
@@ -14,7 +15,11 @@ public class EnemyDeath : MonoBehaviour
 
     private void Damageble_OnCharacterDeadEvent(object obj)
     {
-        FindObjectOfType<AudioManager>().Play("EnemyDeath");
+        if (!played)
+        {
+            FindObjectOfType<AudioManager>().Play("EnemyDeath");
+            played = true;
+        }
         StartCoroutine(DeadAnim());
     }
 

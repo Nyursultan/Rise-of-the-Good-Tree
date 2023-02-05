@@ -9,6 +9,11 @@ TagManager:
   - Platform
   - NextLevel
   - Boss
+  - FlyingEye
+  - EnemyTree
+  - FlyingCarrot
+  - FlyingRedis
+  - EvilWorm
   layers:
   - Default
   - TransparentFX

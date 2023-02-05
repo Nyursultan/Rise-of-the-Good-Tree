@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4274058828454169227}
   m_Layer: 8
   m_Name: EvilWorm1
-  m_TagString: Untagged
+  m_TagString: EvilWorm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

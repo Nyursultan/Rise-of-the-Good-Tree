@@ -11,17 +11,4 @@ public class StickmanCollision : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Step");
         }
     }
-
-    private void JumpSound()
-    {
-        FindObjectOfType<AudioManager>().Play("Step");
-    }
-
-    private void FixedUpdate()
-    {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            JumpSound();
-        }
-    }
 }
