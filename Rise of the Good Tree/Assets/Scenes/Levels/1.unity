@@ -892,7 +892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168485863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.575775, y: -1.1465197, z: -10}
+  m_LocalPosition: {x: -20.575197, y: -1.1465197, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3136,6 +3136,10 @@ PrefabInstance:
     - target: {fileID: 4338014075962442074, guid: 9aad3ba0a6859934b87282aba7ef8017, type: 3}
       propertyPath: m_Name
       value: SliderCanvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338014075962442074, guid: 9aad3ba0a6859934b87282aba7ef8017, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aad3ba0a6859934b87282aba7ef8017, type: 3}
@@ -6438,6 +6442,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1957416616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 364596560387255861, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
+  m_PrefabInstance: {fileID: 8374964376879002513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1958268397
 GameObject:
   m_ObjectHideFlags: 0
@@ -6796,7 +6805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2113400144
 Transform:
   m_ObjectHideFlags: 0
@@ -7030,7 +7039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6642708640705046930, guid: edec27c65efbca346b77fa7807290c52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.575777
+      value: -20.575207
       objectReference: {fileID: 0}
     - target: {fileID: 6642708640705046930, guid: edec27c65efbca346b77fa7807290c52, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7079,6 +7088,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 364596560387255863, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
   m_PrefabInstance: {fileID: 8374964376879002513}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8157873911449148846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957416616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd23580e26d3ed14eafca3fea74ee439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel: {fileID: 1958268402}
 --- !u!1001 &8374964376879002513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7086,6 +7108,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 364596560387255857, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
+      propertyPath: hp
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 364596560445454099, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
       propertyPath: cameraShake
       value: 

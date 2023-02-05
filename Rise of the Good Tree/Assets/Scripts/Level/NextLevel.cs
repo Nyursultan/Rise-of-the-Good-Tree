@@ -41,6 +41,23 @@ public class NextLevel : MonoBehaviour
         }
     }
 
+    public IEnumerator GoToMainMenu()
+    {
+        float alfa = 0;
+
+        while (alfa < 255)
+        {
+            alfa += speed * Time.deltaTime;
+
+            float r = nextLevelEffectSprite.color.r;
+            float g = nextLevelEffectSprite.color.g;
+            float b = nextLevelEffectSprite.color.b;
+
+            nextLevelEffectSprite.color = new Color(r, g, b, alfa / 255);
+            yield return null;
+        }
+        Application.LoadLevel(0);
+    }
     public IEnumerator EndLevelEffect()
     {
         float alfa = 0;
