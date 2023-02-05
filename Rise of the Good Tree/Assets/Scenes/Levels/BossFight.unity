@@ -1352,7 +1352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6642708640705046930, guid: edec27c65efbca346b77fa7807290c52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.583057
+      value: -19.57951
       objectReference: {fileID: 0}
     - target: {fileID: 6642708640705046930, guid: edec27c65efbca346b77fa7807290c52, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1852,7 +1852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197333517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.995865, y: 1.6354506, z: -10}
+  m_LocalPosition: {x: -18.989532, y: 1.6354306, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2473,6 +2473,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &277865090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 364596560387255861, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
+  m_PrefabInstance: {fileID: 819099502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &284887063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4840,6 +4845,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 364596560387255863, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
   m_PrefabInstance: {fileID: 819099502}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &702164956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277865090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd23580e26d3ed14eafca3fea74ee439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel: {fileID: 498694223}
 --- !u!1 &713128751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,6 +5547,14 @@ PrefabInstance:
     - target: {fileID: 364596560445454103, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
       propertyPath: m_Name
       value: PlayerDima
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374964375498124004, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
+      propertyPath: m_Size.y
+      value: 2.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374964375498124004, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22557ee744bd5984b90292f240df88ae, type: 3}
@@ -12054,6 +12080,10 @@ PrefabInstance:
     - target: {fileID: 3329494096130156202, guid: a31e1bf7d5d506e4b87a89ab97448320, type: 3}
       propertyPath: m_Name
       value: MainCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329494096130156214, guid: a31e1bf7d5d506e4b87a89ab97448320, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3329494096130156215, guid: a31e1bf7d5d506e4b87a89ab97448320, type: 3}
       propertyPath: m_Pivot.x

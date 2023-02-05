@@ -12,6 +12,7 @@ public class Damageble : MonoBehaviour
 
     public event Action<object> OnCharacterDeadEvent;
     public event Action<object> OnCharacterTakeDamageEvent;
+
     void Start()
     {
         
