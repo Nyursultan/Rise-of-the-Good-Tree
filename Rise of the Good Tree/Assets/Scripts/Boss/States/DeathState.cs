@@ -29,6 +29,7 @@ public class DeathState : MonoBehaviour
     {
         if (!flag)
         {
+            FindObjectOfType<AudioManager>().Play("BossDeath");
             flag = true;
             animator.SetTrigger("isDead");
             StartCoroutine(BossDeadEffect());
