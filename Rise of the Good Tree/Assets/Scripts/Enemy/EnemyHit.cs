@@ -20,7 +20,7 @@ public class EnemyHit : MonoBehaviour
         {
             if (damageble != null)
             {
-                FindObjectOfType<AudioManager>().Play("TreeHit");
+                //FindObjectOfType<AudioManager>().Play("TreeHit");
                 damageble.Damage(damage);
             }
         }

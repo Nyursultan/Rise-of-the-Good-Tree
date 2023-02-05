@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: d518f1f173a481349808e7594da1178a, type: 3}
+    clip: {fileID: 8300000, guid: b9b701138fdab2742b70c5b95e0e3390, type: 3}
     volume: 0.427
     pitch: 1
     loop: 1
@@ -59,19 +59,37 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerHit
     clip: {fileID: 8300000, guid: 7cc90134ad0eb114788447834a9ec932, type: 3}
-    volume: 0.534
+    volume: 0.675
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: FlyingEyeHit
     clip: {fileID: 8300000, guid: 1435c148ef0115343bae6fc07793be5c, type: 3}
-    volume: 0.534
+    volume: 0.706
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: EnemyDeath
     clip: {fileID: 8300000, guid: d5de1929b9ec43a4d9af443d9e91611d, type: 3}
-    volume: 1
+    volume: 0.746
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyTreeHit
+    clip: {fileID: 8300000, guid: 47e99dc3833dfcf4a91f8be433caea3a, type: 3}
+    volume: 0.809
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FlyingCarrotHit
+    clip: {fileID: 8300000, guid: 455c9ec28809f174484d92a5414cfb0f, type: 3}
+    volume: 0.809
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BulletShot
+    clip: {fileID: 8300000, guid: d1ee4fc3f9c0f324ba09c16ae9968777, type: 3}
+    volume: 0.333
     pitch: 1
     loop: 0
     source: {fileID: 0}

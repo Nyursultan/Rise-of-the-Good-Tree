@@ -35,6 +35,7 @@ public class StickmanController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && isGrounded())
         {
+            FindObjectOfType<AudioManager>().Play("Step");
             rbLeftForWalk.AddForce(new Vector2(rbLeftForWalk.velocity.x, jumpForce));
             rbLeftMidForWalk.AddForce(new Vector2(rbLeftMidForWalk.velocity.x, jumpForce));
             rbRightForWalk.AddForce(new Vector2(rbRightForWalk.velocity.x, jumpForce));

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 974703967}
   m_Layer: 8
   m_Name: FlyingEye
-  m_TagString: Untagged
+  m_TagString: FlyingEye
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69167e7547c2cbd4c9703f856026dcaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 50
 --- !u!114 &1257423090504257366
 MonoBehaviour:
   m_ObjectHideFlags: 0
