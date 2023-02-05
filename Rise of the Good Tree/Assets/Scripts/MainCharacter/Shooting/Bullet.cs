@@ -96,6 +96,10 @@ public class Bullet : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("EvilWormHit");
         }
+        if (collision.tag == "Boss")
+        {
+            FindObjectOfType<AudioManager>().Play("BossHit");
+        }
     }
     float GetSpriteAngleDirection(Vector3 direction)
     {

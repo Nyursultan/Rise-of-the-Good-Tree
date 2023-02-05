@@ -76,7 +76,7 @@ public class BossStateBehavior : MonoBehaviour
             return BossStates.SimpleShootingState;
 
         if (hp<=300 && hp>200)
-           return BossStates.CircleShootingState;
+            return BossStates.CircleShootingState;
 
         if(hp <= 200 && hp > 100)
            return BossStates.EnemysState;
