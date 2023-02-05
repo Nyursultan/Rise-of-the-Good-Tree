@@ -15,8 +15,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/2.unity
     guid: 5dd29061481df484daa44cf5d6e99dc5
   - enabled: 1
+    path: Assets/Main menu with parallax FREE/Main Menu Demo.unity
+    guid: 4f8b438458fa30041865000691e86423
+  - enabled: 1
     path: Assets/Scenes/Levels/1.unity
     guid: 9e48909157f9e2143991973a6fe51c63
+<<<<<<< HEAD
+  - enabled: 1
+    path: Assets/Scenes/NyurgunLevels/Nyur2.unity
+    guid: 67caf3021b2d82741b1f9719ffe409c6
+=======
+  - enabled: 0
+    path: Assets/Scenes/Levels/2.unity
+    guid: 5dd29061481df484daa44cf5d6e99dc5
+>>>>>>> f8e7b85c02420c7705a0d32ad2a3c3427fd2ec60
   - enabled: 1
     path: Assets/Scenes/NyurgunLevels/Nyur2.unity
     guid: 67caf3021b2d82741b1f9719ffe409c6
