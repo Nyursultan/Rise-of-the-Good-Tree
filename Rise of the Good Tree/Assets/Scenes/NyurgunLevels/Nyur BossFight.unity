@@ -9189,7 +9189,7 @@ GameObject:
   - component: {fileID: 1576365150}
   m_Layer: 3
   m_Name: GameObject
-  m_TagString: Platform
+  m_TagString: PlatformStone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12131,6 +12131,12 @@ MonoBehaviour:
   - name: BossHit
     clip: {fileID: 8300000, guid: 797a06d1afd484640865dce12da1083d, type: 3}
     volume: 0.499
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BossDeath
+    clip: {fileID: 8300000, guid: c3bde95bde3580544a2a4e3dee7e557a, type: 3}
+    volume: 0.246
     pitch: 1
     loop: 0
     source: {fileID: 0}
