@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemysState : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    GameObject[] enemys;
+
+    bool isSpawn = false;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -19,5 +22,13 @@ public class EnemysState : MonoBehaviour
     public void Callback(BossStateBehavior bossStateBehavior)
     {
 
+        if (isSpawn)
+            return;
+
+        for (int i = 0; i < enemys.Length; i++)
+        {
+            enemys[i].SetActive(true);
+        }
+        isSpawn = true;
     }
 }

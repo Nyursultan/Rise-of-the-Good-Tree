@@ -8,6 +8,7 @@ enum BossStates
     SimpleShootingState,
     CircleShootingState,
     EnemysState,
+    CircleBlockState,
     DeathState
 }
 
@@ -22,6 +23,7 @@ public class BossStateBehavior : MonoBehaviour
     SimpleShootingState simpleShootingState;
     CircleShootingState circleShootingState;
     EnemysState enemysState;
+    CircleBlockState circleBlockState;
     DeathState deathState;
 
     void Start()
@@ -36,6 +38,7 @@ public class BossStateBehavior : MonoBehaviour
         simpleShootingState = GetComponent<SimpleShootingState>();
         circleShootingState = GetComponent<CircleShootingState>();
         enemysState = GetComponent<EnemysState>();
+        circleBlockState = GetComponent<CircleBlockState>();
         deathState = GetComponent<DeathState>();
     }
 
@@ -53,6 +56,10 @@ public class BossStateBehavior : MonoBehaviour
                 break;
             case BossStates.EnemysState:
                 enemysState.Callback(this);
+                simpleShootingState.Callback(this);
+                break;
+            case BossStates.CircleBlockState:
+                circleBlockState.Callback(this);
                 break;
             case BossStates.DeathState:
                 deathState.Callback(this);
@@ -71,9 +78,12 @@ public class BossStateBehavior : MonoBehaviour
         if (hp<=300 && hp>200)
            return BossStates.CircleShootingState;
 
-        if(hp <= 200 && hp > 0)
+        if(hp <= 200 && hp > 100)
            return BossStates.EnemysState;
-        
-           return BossStates.DeathState;
+
+        if (hp<=100 && hp>0)
+            return BossStates.CircleBlockState;
+
+        return BossStates.DeathState;
     }
 }

@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class DeathState : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    float speed;
+
+    [SerializeField]
+    NextLevel nextLevel;
+
+    Animator animator;
+
+    bool flag = false;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -18,6 +27,17 @@ public class DeathState : MonoBehaviour
 
     public void Callback(BossStateBehavior bossStateBehavior)
     {
+        if (!flag)
+        {
+            flag = true;
+            animator.SetTrigger("isDead");
+            StartCoroutine(BossDeadEffect());
+        }
+    }
 
+    IEnumerator BossDeadEffect()
+    {
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(nextLevel.EndLevelEffect());
     }
 }
